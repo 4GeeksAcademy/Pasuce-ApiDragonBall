@@ -1,16 +1,33 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import { useEffect } from "react";
+import { getPersonajes, getPlanetas } from "./serviceAPI.js";
+import { ListaPersonajes } from "../components/ListaPersonajes.jsx";
+import { ListaPlanetas } from "../components/ListaPlanetas.jsx";
+import { useGlobalReducer } from "../hooks/useGlobalReducer.jsx";
+
+
+
+
 
 export const Home = () => {
 
-  const {store, dispatch} =useGlobalReducer()
+    const { store, dispatch, actions } = useGlobalReducer();
+    useEffect(() => {
+        getPersonajes(dispatch);
+        getPlanetas(dispatch);
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
-	);
+
+    }, [dispatch])
+
+
+    return (
+        <>
+            <div>
+                
+                <h1>🔥 Bienvenido al Universo Dragon Ball</h1>
+                <ListaPersonajes />
+                <ListaPlanetas />
+                
+            </div>
+        </>
+    );
 }; 

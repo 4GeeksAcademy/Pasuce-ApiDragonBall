@@ -1,11 +1,15 @@
-export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Check the <a target="_blank" href="https://4geeks.com/docs/start/start-react-advanced-project">template documentation</a> <i className="fa-solid fa-file"></i> for help.
-		</p>
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
-);
+export const Footer = () => {
+    return (
+        <footer className="footer mt-auto py-3 text-center">
+            <div className="footer-img">
+                <img
+                    src="https://static.vecteezy.com/system/resources/previews/003/539/286/original/seven-dragon-balls-and-dragon-in-the-dragonball-anime-free-vector.jpg"
+                    alt="Dragon Footer"
+                    className="dragon-balls-img"
+                />
+            </div>
+            <p>© 2025 Pasuce Dragon Ball API</p>
+            <p>Desarrollado con <i className="fa fa-heart text-danger" /> por Pasuce</p>
+        </footer>
+    );
+};

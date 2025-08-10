@@ -1,0 +1,279 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    color: #0e0d0d;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #cca455;
+    text-shadow: 1px 2px 8px #f0a105;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    background-clip: text;
+}
+
+.card {
+    background-color: #746c6c;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(231, 226, 226, 0.4);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.9s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.9s ease;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.9em;
+    box-shadow: 0 4px 12px rgb(235, 142, 4);
+    color: #77530a;
+}
+
+.botones {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.boton-cartas {
+    width: 150px;
+    height: 50px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #030303;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.boton-cartas:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.boton-favoritos {
+    width: 150px;
+    height: 50px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    font-weight: 700;
+    color: #030303;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.boton-favoritos:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.dropdown-menu {
+    background-color: #1c1c1c;
+    border: 2px solid #f7b733;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 12px #ffd277;
+}
+
+.dropdown-menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px;
+    border-bottom: 1px solid #333;
+}
+
+.dropdown-item {
+    color: #ffd277;
+    font-weight: 500;
+
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.dropdown-item-text {
+    color: #aaa;
+    font-style: italic;
+}
+
+.info-extra {
+    margin-top: 15px;
+    background-color: #746c6c;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 0 10px;
+    width: 40px;
+}
+
+.imagen-planeta {
+    display: block;
+    margin: 2rem auto;
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.detalle-planeta {
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
+    color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.titulo-planeta {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-grid div {
+    background-color: #3a3a3a;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.info-grid div:hover {
+    transform: scale(1.02);
+}
+
+
+.card-personaje-detalle {
+    background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+    color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.nombre-personaje {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+.imagen-personaje {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.info-personaje {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.info-personaje p {
+    background-color: #3a3a3a;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.footer {
+    font-size: 1.rem;
+    color: #f3db01;
+    line-height: 1.3;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+    }
+}
+
+.dragon-balls-img {
+    max-width: 80px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(255, 230, 0);
+    animation: pulseGlow 2s infinite;
+    transition: transform 0.4s ease-in-out;
+}
